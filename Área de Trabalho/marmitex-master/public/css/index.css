@@ -1,0 +1,79 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+/*
+Limpar formatações padro?s
+*/
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box; 
+    overflow-x: hidden;
+  }
+  
+  body, html{
+  height: 100%;
+
+  
+  }
+  a {
+      color: #415a77;
+  }
+  
+  
+  .red {
+    color: red;
+  }
+  
+  .black {
+    color: black;
+  }
+  
+  .space-avatar {
+  margin-top: 31px;
+  }
+  .p3{
+  color: #666;
+  font-size: 15px;
+  padding-bottom: 10px;
+  }
+  
+.avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-item {
+    text-align: center;
+}
+  /* Featurettes
+  ------------------------- */
+  
+  .featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  }
+  
+  /* Thin out the marketing headings */
+  .featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+  }
+
+  li a { 
+    font-size: 15px;
+    font-family: 'Open Sans SemiBold', sans-serif;
+  } 
+  
+  li a:link {
+    text-decoration: none;
+  }
+  
+  li a:visited {
+    font-size: 14px;
+  }
+  
+
+  
