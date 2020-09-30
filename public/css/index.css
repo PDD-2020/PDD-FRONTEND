@@ -14,16 +14,23 @@ Limpar formatações padro?s
   
   body, html{
   height: 100%;
+  
+  }
 
-  
-  }
   a {
-      color: #415a77;
+      color: #d9d9d9;
   }
-  
+
+  p {
+    padding: 10px;
+  }
+
+  footer {
+    margin-top: 25px;
+  }
   
   .red {
-    color: red;
+    color: #ff1616;
   }
   
   .black {
@@ -38,6 +45,9 @@ Limpar formatações padro?s
   font-size: 15px;
   padding-bottom: 10px;
   }
+  .col-lg-2 {
+    padding: 0 !important;
+  }
   
 .avatar {
     display: flex;
@@ -46,7 +56,59 @@ Limpar formatações padro?s
 }
 
 .nav-item {
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+}
+
+.nav-item:hover {
+  background-color: #fff;
+  border-right: 5px solid #ff1616;
+  border-bottom: 1px solid #2e2e2e;
+  font-weight: bold;
+}
+
+.nav-item:hover a {
+  color: #2e2e2e;
+}
+
+.top {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+}
+
+.bi-search{
+  display: block;
+  float: right;
+  z-index: 999;
+  margin-top: -28px;
+  margin-right: 10px;
+}
+.modal-header {
+     border-top-left-radius: .0rem;
+    border-top-right-radius: .0rem; 
+    background: #2e2e2e;
+    color: #fff;
+}
+.modal-header .close {
+  color: #fff;
+}
+
+.number-notify {
+  background-color: #ff1616;
+  display: inline-block;
+  width: 15px;
+  font-size: 12px;
+}
+
+.glyphicon  {
+  line-height: 2;
+}
+.more {
+  margin-left: 5px;
+
 }
   /* Featurettes
   ------------------------- */
