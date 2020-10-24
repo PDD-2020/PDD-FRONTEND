@@ -1,4 +1,3 @@
-<img src="https://img.shields.io/static/v1?label=npm&message=v-@6.14.4 &color=7159c1&style=for-the-badge&logo=ghost"/>
 
 
 <h1 align="center">Front end PDD</h1>
@@ -45,3 +44,13 @@ As seguintes ferramentas foram usadas na construção do projeto:
     <a href="https://styled-components.com/">🔗 Styled-components</a>
 </h1>
 <p align="center">🚀 lib para construir interfaces do usuário com componentes reutilizáveis</p>
+
+### Features
+
+- [x] Cadastro de Clientes
+- [ ] Cadastro de Produtos
+- [ ] Cadastro de Pedidos
+
+
+![cadastro-cliente](https://user-images.githubusercontent.com/31622166/97092300-6c2fd680-1619-11eb-93e4-60f155135866.png)
+
