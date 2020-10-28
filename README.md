@@ -1,49 +1,46 @@
-
-
 <h1 align="center">Front end PDD</h1>
 
-## DescriÃ§Ã£o do Projeto
-<p align="center">Para rodar o projeto local fique atento as instruÃ§Ãµes</p>
+## Descrição do Projeto
+<p align="center">Para rodar o projeto local fique atento as instruções</p>
 
-### PrÃ©-requisitos
+### Pré-requisitos
 
-Antes de comeÃ§ar, vocÃª vai precisar ter instalado em sua mÃ¡quina as seguintes ferramentas:
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
-AlÃ©m disto Ã© bom ter um editor para trabalhar com o cÃ³digo como [VSCode](https://code.visualstudio.com/)
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 
 
-### ğŸ² Rodando o Front End (servidor)
+### ?? Rodando o Front End (servidor)
 
-# Clone este repositÃ³rio
+# Clone este repositório
 $ git clone <https://github.com/PDD-2020/PDD-FRONTEND>
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd PDD-FRONTEND
+$ cd PDD-FRONTEND/my-app-bootstrap
 
-# Instale as dependÃªncias
+# Instale as dependências
 $ npm install
 
-# Execute a aplicaÃ§Ã£o em modo de desenvolvimento
+# Execute a aplicação em modo de desenvolvimento
 $ npm start
 
-# O servidor inciarÃ¡ na porta:3000 - acesse <http://localhost:3000> 
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000> 
 
-### ğŸ›  Tecnologias
-
-As seguintes ferramentas foram usadas na construÃ§Ã£o do projeto:
+### ?? Tecnologias
+As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
 - [Javascrip](https://www.javascriptlan.org/)
 
 <h1 align="center">
-    <a href="https://reactstrap.github.io/">ğŸ”— React</a>
+    <a href="https://reactstrap.github.io/">?? React</a>
 </h1>
 <h1 align="center">
-    <a href="https://styled-components.com/">ğŸ”— Styled-components</a>
+    <a href="https://styled-components.com/">?? Styled-components</a>
 </h1>
-<p align="center">ğŸš€ lib para construir interfaces do usuÃ¡rio com componentes reutilizÃ¡veis</p>
+<p align="center">?? lib para construir interfaces do usuário com componentes reutilizáveis</p>
 
 ### Features
 
@@ -51,6 +48,4 @@ As seguintes ferramentas foram usadas na construÃ§Ã£o do projeto:
 - [ ] Cadastro de Produtos
 - [ ] Cadastro de Pedidos
 
-
 ![cadastro-cliente](https://user-images.githubusercontent.com/31622166/97092300-6c2fd680-1619-11eb-93e4-60f155135866.png)
-
