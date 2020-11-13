@@ -1,5 +1,5 @@
 import React, { useState }  from 'react';
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Button } from 'reactstrap';
 import * as Styled from './style'
 
 import { Collapse, CardBody, Card } from 'reactstrap';
@@ -13,10 +13,10 @@ function ClienstCard( { name, endereco, numero, email } ) {
   return (
    <Styled.Container>
       <Row>
-          <button className="card-client" onClick={toggle} style={{ marginBottom: '1rem' }} >
+          <Button className="card-client" onClick={toggle} style={{ marginBottom: '1rem' }} >
               <strong>Cliente: <span>{name}</span></strong>
               <strong></strong>
-          </button>
+          </Button>
 
           <Collapse isOpen={isOpen}>
           <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
@@ -26,7 +26,7 @@ function ClienstCard( { name, endereco, numero, email } ) {
                   <span> {name} </span>
                 </Col>
                 <Col>
-                  <strong>Endereço: </strong>
+                  <strong>EndereÃ§o: </strong>
                   <span> {endereco} </span>
                 </Col>
                 <Col>
