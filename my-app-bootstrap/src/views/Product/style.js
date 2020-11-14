@@ -15,7 +15,6 @@ export const Form = styled.form`
     
     a {
         color: red;
-        padding-left: 10px;
     }
 
     .flex {
@@ -31,6 +30,9 @@ export const Form = styled.form`
             width: 90px;
             border-radius: 50px;
         }
+    }
+    .btn-warning {
+        margin-right: 10px;
     }
     
 `

@@ -19,8 +19,8 @@ function Header () {
             <ListGroupItem ><Link to="cliente"> <BsPeopleCircle size={40} color='#ff1616' /> </Link></ListGroupItem>
             <ListGroupItem ><Link to="produtos"> <GiKnifeFork size={40} color='#ff1616' /></Link></ListGroupItem>
             <ListGroupItem ><SiIfood size={40} color='#ff1616' /></ListGroupItem>
-            <ListGroupItem ><BsCloudDownload size={40} color='#ff1616' /></ListGroupItem>
-            <ListGroupItem ><FaBell size={40} color='#ff1616' /><span>5</span></ListGroupItem>
+         {/*    <ListGroupItem ><BsCloudDownload size={40} color='#ff1616' /></ListGroupItem>
+            <ListGroupItem ><FaBell size={40} color='#ff1616' /><span>5</span></ListGroupItem> */}
         </S.ListGroup>
     </Col>
   

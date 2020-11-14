@@ -7,6 +7,14 @@ export const Navbar = styled.div`
     margin-left: 20px;
 }
 
+.form-group {
+    display: flex;
+
+    input {
+        width: 80%;
+    }
+}
+
 .form-inline {
     margin-bottom: 30px;
 }

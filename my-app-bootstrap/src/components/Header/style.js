@@ -11,7 +11,7 @@ export const ListGroup = styled.div`
     cursor: pointer;
   
     img {
-        width: 195px;
+        max-width: 170px;
     }
 
     .btn-secondary {

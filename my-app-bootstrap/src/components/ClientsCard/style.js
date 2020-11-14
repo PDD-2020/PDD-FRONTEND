@@ -7,7 +7,7 @@ export const Container = styled.div`
     .card-client {
         border: none;
         height: 50px;
-        border-left: 7px solid #80ed99;
+        border-left: 8px solid #f77f00;
         background: #2e2e2e;
         color: #fff;
         border-top-right-radius: 10px;
@@ -20,7 +20,19 @@ export const Container = styled.div`
     }
 
 
-    .card {
+    .card-body {
+        margin-bottom: 20px;
+    }
+
+    .collapse {
+        width: 90%;
+    }
+
+    .btn {
+        border-radius: none;
+    }
+
+  /*   .card {
         width: 95%;
     }
 
@@ -31,7 +43,7 @@ export const Container = styled.div`
 
     .show {
         width: 95%;
-    }
+    } */
 
     span {
         text-transform: capitalize;

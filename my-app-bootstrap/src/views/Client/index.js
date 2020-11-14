@@ -1,7 +1,7 @@
-import React, { useState , useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, Redirect }  from 'react-router-dom';
 import { FormGroup, Label, Input, Button, Row, Col, } from 'reactstrap';
-import { useHistory } from 'react-router-dom';
+
 import api from  '../../services/api';
 
 import * as Style from './style';
@@ -12,7 +12,7 @@ import Header from '../../components/Header';
 
 function FormClient( ) {
                                                                                                                                         
-    const history = useHistory();
+    const [redirect, setRedirect] = useState(false);
 
     const [name, setName] = useState("");
     const [endereco, setEndereco] = useState("");
@@ -20,26 +20,29 @@ function FormClient( ) {
     const [email, setEmail] = useState("");
 
 
-    async function Save() {
+    async function Save()   {
+        // validação dos campos
+        if(!name) 
+            return alert('Informe o nome do cliente')
+        else if(!endereco)
+            return alert('Informe o endereco do cliente')
+        else if(!numero)
+            return alert('Informe o número do cliente')
+        
         await api.post('/cliente', {
             name,
             endereco,
             numero,
             email,
         }).then(() =>
-            alert('Cliente Cadastrado')
+            setRedirect(true)
         )
-
-        history.push('/');
     }
 
-    useEffect(() => {
-      Save();
-    }, )
-
-  return (
+    return (
     
     <Row>
+        { redirect && <Redirect to="/" /> }
         <Header />
         <Col md={9}>
             <Style.Form>
@@ -90,14 +93,14 @@ function FormClient( ) {
                     name="email"
                     id="exampleEmail"
                     placeholder="Digite o e-mail..."
-                    onChange={(e)=> setEmail(e.target.value)} value={email}
+                    onChange={(e) => setEmail(e.target.value)} value={email}
 
                     />
                 </FormGroup>
                 </Col>
                 <Col sm={6}>
-                    <Button type="submit" onClick={Save} color="success" class="close">Salvar</Button>
-                    <Link to="/">Voltar</Link>
+                    <Button type="button" onClick={Save} color="warning" class="close">Salvar</Button>
+                    <Button type="button" color="secondary" ><Link to="/">Voltar</Link></Button>
                 </Col>
             
             </Style.Form>

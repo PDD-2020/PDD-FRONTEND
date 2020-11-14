@@ -15,7 +15,10 @@ export const Form = styled.form`
     
     a {
         color: red;
-        padding-left: 10px;
+
+    }
+    button {
+        margin-right: 10px;
     }
     
 `

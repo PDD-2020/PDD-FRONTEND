@@ -1,5 +1,5 @@
 import React , { useState, useEffect } from 'react';
-import { Row, Col, Button, Form, FormGroup, Input } from 'reactstrap';
+import { Row, Col, Button, FormGroup, Input } from 'reactstrap';
 import { BsSearch } from "react-icons/bs";
 
 
@@ -44,23 +44,24 @@ const Home = (props) => {
             <Row>
                 <Header />
                 <Col sm="5" className="content">
-                    <Form className="form-inline">
-                        <FormGroup>
-                            <Input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                            <Button className="btn btn-outlin-danger my-2 my-sm-0" type="submit"><BsSearch size={22} color='#80ed99'/></Button>
-                        </FormGroup>
-                    </Form>
+
+                    <FormGroup >
+                        <Input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                        <Button className="btn btn-outlin-danger" type="submit"><BsSearch size={22} color='#80ed99'/></Button>
+                    </FormGroup>
+                    
                     { client.map(clients => (
                         <ClientsCard name={clients.name}  endereco={clients.endereco} numero={clients.numero} email={clients.email}/> 
                         ))
                     }
                 </Col>
                 <Col sm="4" className="content dish">
-                {   product.map(products => (
-                        <ProductsCard nome={products.nome} valor={products.valor} descricao={products.descricao} tipo={products.tipo}/> 
-                    )) 
-
-                }  
+                <Row>
+                    {   product.map(products => (
+                            <ProductsCard nome={products.nome} valor={products.valor} descricao={products.descricao} tipo={products.tipo}/> 
+                        )) 
+                    }  
+                </Row>
                 </Col>
             </Row>
     </S.Navbar>  

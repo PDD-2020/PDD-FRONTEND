@@ -1,21 +1,20 @@
 import React, { useState }  from 'react';
-import { Row, Col, Button } from 'reactstrap';
+import { Row, Col, Button, Collapse, CardBody, Card } from 'reactstrap';
+import { RiMapPinUserLine } from "react-icons/ri";
 import * as Styled from './style'
-
-import { Collapse, CardBody, Card } from 'reactstrap';
-
 
 function ClienstCard( { name, endereco, numero, email } ) {
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
+
   return (
    <Styled.Container>
       <Row>
           <Button className="card-client" onClick={toggle} style={{ marginBottom: '1rem' }} >
               <strong>Cliente: <span>{name}</span></strong>
-              <strong></strong>
+              <RiMapPinUserLine size={20} color='#f77f00' />
           </Button>
 
           <Collapse isOpen={isOpen}>
@@ -26,7 +25,7 @@ function ClienstCard( { name, endereco, numero, email } ) {
                   <span> {name} </span>
                 </Col>
                 <Col>
-                  <strong>EndereÃ§o: </strong>
+                  <strong>Endereço: </strong>
                   <span> {endereco} </span>
                 </Col>
                 <Col>

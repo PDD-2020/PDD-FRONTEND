@@ -1,7 +1,6 @@
-import React, { useState , useEffect} from 'react';
-import {Link} from 'react-router-dom';
-import { FormGroup, Label, Input, Button, Row, Col, } from 'reactstrap';
-import { useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link , Redirect } from 'react-router-dom';
+import { FormGroup, Label, Input, Button, Row, Col } from 'reactstrap';
 import api from  '../../services/api';
 
 import * as Style from './style';
@@ -11,8 +10,8 @@ import Header from '../../components/Header';
 import TypeProducts from '../../utils/typeProducts';
 
 function FormProduct( ) {
-                                                                                                                                        
-    const history = useHistory();
+                                                                                                                                                                                                                                                                          
+    const [redirect, setRedirect] = useState(false);
 
     const [nome, setNome] = useState("");
     const [valor, setValor] = useState("");
@@ -20,25 +19,31 @@ function FormProduct( ) {
     const [tipo, setTipo] = useState("");
 
     async function SaveProduct() {
+
+        if(!nome) 
+            return alert('Informe o nome do produto')
+        else if(!valor)
+            return alert('Informe o valor do produto')
+        else if(!descricao)
+            return alert('Adicione uma breve descrição')
+        else if(!tipo)
+            return alert('Selecione uma imagem')
+
         await api.post('/produtos', {
             nome,
             valor,
             descricao,
             tipo,
         }).then(() =>
-            alert('Produto Cadastrado')
+            setRedirect(true)
         )
 
-        history.push('/');
     }
 
-    useEffect(() => {
-        SaveProduct();
-    }, )
-
-  return (
+    return (
     
     <Row>
+        { redirect && <Redirect to="/" /> }
         <Header />
         <Col md={9}>
             <Style.Form>
@@ -56,23 +61,23 @@ function FormProduct( ) {
                         />
                     </FormGroup>
                 </Col>
-                <Col sm={6}>
+                <Col sm={3}>
                     <FormGroup>
                         <Label for="examplePassword">Valor:</Label>
                         <Input
-                            type="text"
+                            type="number"
                             name="number"
                             id="text"
-                            placeholder="Digite o endere�o..."
+                            placeholder="R$: "
                             onChange={(e) => setValor(e.target.value)} value={valor}
                         />
                     </FormGroup>
                 </Col>
                 <Col sm={6}>
                 <FormGroup>
-                        <Label for="exampleText">Descric�o:</Label>
+                        <Label for="exampleText">Breve descrição:</Label>
                         <Input
-                            type="textarea" name="text" id="exampleText" 
+                            type="textarea" name="text" id="exampleText" maxLength="100"
                             onChange={(e) => setDescricao(e.target.value)} value={descricao}
                         />
                     </FormGroup>
@@ -83,15 +88,15 @@ function FormProduct( ) {
                         TypeProducts.map( (icon, index) => (
                             index > 0 && 
                             <Button type="button" onClick={() => setTipo(index)}>
-                                <img src={icon} alt="Tipo tarefa"/>
+                                <img src={icon} alt="Foto produto"/>
                             </Button>   
                         ))
                     }
                 </FormGroup>
                 </Col>
                 <Col sm={6}>
-                    <Button type="submit" onClick={SaveProduct} color="success" class="close">Salvar</Button>
-                    <Link to="/">Voltar</Link>
+                    <Button type="button" onClick={SaveProduct} color="warning" class="close">Salvar</Button>
+                    <Button type="button" color="secondary" ><Link to="/">Voltar</Link></Button>
                 </Col>
             
             </Style.Form>
