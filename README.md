@@ -39,7 +39,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <h1 align="center">
     <a href="https://styled-components.com/"> Styled-components</a>
 </h1>
-<p align="center">?? lib para construir interfaces do usuário com componentes reutilizáveis</p>
+<p align="center"> lib para construir interfaces do usuário com componentes reutilizáveis</p>
 
 ### Features
 
