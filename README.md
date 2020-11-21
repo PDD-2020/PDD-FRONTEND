@@ -3,11 +3,7 @@
 ## Descrição do Projeto
 <p align="center">Para rodar o projeto local fique atento as instruções</p>
 
-<<<<<<< HEAD
-### Pr�-requisitos ??
-=======
 ### Pré-requisitos 🚀
->>>>>>> 388b1e3cfff235c6cfc6b82e541195ab2b6834b4
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
@@ -16,11 +12,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ### Rodando o Front End (servidor)
 
-<<<<<<< HEAD
-# Clone este reposit�rio
-=======
 # Clone este repositório
->>>>>>> 388b1e3cfff235c6cfc6b82e541195ab2b6834b4
 $ git clone <https://github.com/PDD-2020/PDD-FRONTEND>
 
 # Acesse a pasta do projeto no terminal/cmd
@@ -34,13 +26,8 @@ $ npm start
 
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000> 
 
-<<<<<<< HEAD
-### �s Tecnologias
-As seguintes ferramentas foram usadas na constru��o do projeto:
-=======
 ### Ás Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
->>>>>>> 388b1e3cfff235c6cfc6b82e541195ab2b6834b4
 
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
