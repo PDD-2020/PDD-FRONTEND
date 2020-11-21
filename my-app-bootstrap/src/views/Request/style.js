@@ -15,10 +15,6 @@ export const Form = styled.form`
         color: #fff;
     }
     
-    a {
-        color: red;
-    }
-
     .flex {
         display: flex;
         flex-direction: row;
@@ -33,6 +29,14 @@ export const Form = styled.form`
             border-radius: 50px;
         }
     }
+    a {
+        color: red;
+
+    }
+    button {
+        margin-right: 10px;
+    }
+    
     .btn-warning {
         margin-right: 10px;
     }
@@ -42,5 +46,15 @@ export const Form = styled.form`
         justify-content: center;
         align-items: center;
     }
+
+    span {
+        color: red;
+        font-size: 20px;
+        font-weight: 700;
+        cursor: pointer;
+        position: absolute;
+        padding-left: 5px;
+    }
+    
     
 `

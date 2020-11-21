@@ -3,15 +3,14 @@
 ## Descrição do Projeto
 <p align="center">Para rodar o projeto local fique atento as instruções</p>
 
-### Pré-requisitos
+### Pré-requisitos ??
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 
-
-### ?? Rodando o Front End (servidor)
+### Rodando o Front End (servidor)
 
 # Clone este repositório
 $ git clone <https://github.com/PDD-2020/PDD-FRONTEND>
@@ -27,7 +26,7 @@ $ npm start
 
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000> 
 
-### ?? Tecnologias
+### Ás Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Node.js](https://nodejs.org/en/)
@@ -45,7 +44,22 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ### Features
 
 - [x] Cadastro de Clientes
-- [ ] Cadastro de Produtos
+- [x] Cadastro de Produtos
 - [ ] Cadastro de Pedidos
 
-![cadastro-cliente](https://user-images.githubusercontent.com/31622166/97092300-6c2fd680-1619-11eb-93e4-60f155135866.png)
+## Home
+
+![image (1)](https://user-images.githubusercontent.com/31622166/99134429-7cc1e400-25fc-11eb-83e6-761e0cb10ebf.png)
+
+## Cadastro Cliente
+
+![image (3)](https://user-images.githubusercontent.com/31622166/99134737-d1199380-25fd-11eb-99db-7f651ac8dd1b.png)
+
+## Cadastro Produto
+
+![image (4)](https://user-images.githubusercontent.com/31622166/99134852-5ac96100-25fe-11eb-8575-9442fad224da.png)
+
+
+
+
+

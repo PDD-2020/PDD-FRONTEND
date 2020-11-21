@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Redirect }  from 'react-router-dom';
 import { FormGroup, Label, Input, Button, Row, Col, } from 'reactstrap';
-
+import { BsPeopleCircle } from "react-icons/bs";
 import api from  '../../services/api';
 
 import * as Style from './style';
@@ -46,8 +46,9 @@ function FormClient( ) {
         <Header />
         <Col md={9}>
             <Style.Form>
+            <Col sm={10}>
                 <Label className="title">Cadastrar Cliente</Label>
-                <Col sm={6}>
+                <Col sm={9}>
                     <FormGroup>
                         <Label for="exampleEmail">Nome:</Label>
                         <Input
@@ -60,7 +61,7 @@ function FormClient( ) {
                         />
                     </FormGroup>
                 </Col>
-                <Col sm={6}>
+                <Col sm={9}>
                     <FormGroup>
                         <Label for="examplePassword">Endereço:</Label>
                         <Input
@@ -72,37 +73,40 @@ function FormClient( ) {
                         />
                     </FormGroup>
                 </Col>
-                <Col sm={6}>
-                <FormGroup>
-                        <Label for="exampleNumber">Telefone</Label>
+                <Col sm={7}>
+                    <FormGroup>
+                            <Label for="exampleNumber">Telefone</Label>
+                            <Input
+                                type="number"
+                                name="number"
+                                id="exampleNumber"
+                                placeholder="Digite o telefone..."
+                                onChange={(e) => setNumero(e.target.value)} value={numero}
+
+                            />
+                        </FormGroup>
+                </Col>
+                <Col sm={9}>
+                    <FormGroup>
+                        <Label for="exampleUrl">E-mail:</Label>
                         <Input
-                            type="number"
-                            name="number"
-                            id="exampleNumber"
-                            placeholder="Digite o telefone..."
-                            onChange={(e) => setNumero(e.target.value)} value={numero}
+                        type="email"
+                        name="email"
+                        id="exampleEmail"
+                        placeholder="Digite o e-mail..."
+                        onChange={(e) => setEmail(e.target.value)} value={email}
 
                         />
                     </FormGroup>
                 </Col>
                 <Col sm={6}>
-                <FormGroup>
-                    <Label for="exampleUrl">E-mail:</Label>
-                    <Input
-                    type="email"
-                    name="email"
-                    id="exampleEmail"
-                    placeholder="Digite o e-mail..."
-                    onChange={(e) => setEmail(e.target.value)} value={email}
-
-                    />
-                </FormGroup>
-                </Col>
-                <Col sm={6}>
                     <Button type="button" onClick={Save} color="warning" class="close">Salvar</Button>
                     <Button type="button" color="secondary" ><Link to="/">Voltar</Link></Button>
                 </Col>
-            
+            </Col>
+                <Col md={2} className="icon">
+                    <BsPeopleCircle size={100} color='#ff1616' />
+                </Col>
             </Style.Form>
         </Col>
     </Row>
