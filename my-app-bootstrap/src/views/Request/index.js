@@ -20,7 +20,9 @@ function FormProduct( ) {
     const [products, setProduct] = useState([]);
 
 
-    /* const [tipo, setTipo] = useState(""); */
+    const [cliente, setCliente] = useState([]);
+    const [produtos, setProduto] = useState([{}]);
+    const [typePackage, setTypePackage] = useState();
 
 
 
@@ -41,11 +43,23 @@ function FormProduct( ) {
     }
 
     async function SaveRequest() {
-        setRedirect(true)
+        console.log('entrou aqui')
+        await api.post('/pedidos', {
+            cliente: {
+                id: cliente
+            },
+            produtos: [
+                {
+                    id : produtos
+                }
+            ],
+            typePackage,
+        }).then(() =>
+            setRedirect(true)
+            
+        )
     }
    
-
-
     useEffect(() =>{
         loadClient();
         loadProduct();
@@ -68,10 +82,9 @@ function FormProduct( ) {
                     <Col sm={9}>
                     <FormGroup>
                     <Label >Selecione o cliente</Label>
-                        <Input type="select" name="select" id="exampleSelect">
-                            <option>Selecione...</option>
+                        <Input type="select" name="select" id="exampleSelect" onChange={(e) => setCliente(e.target.value)}>
                             { clients.map(client => (
-                                <option key={client.id} label={client.name}></option>  
+                                <option key={client.id}  value={client.id} label={client.name}></option>  
                                 )) 
                             }
                         </Input>
@@ -83,14 +96,19 @@ function FormProduct( ) {
                     <Col sm={9}>
                     <FormGroup>
                     <Label >Selecione o produto</Label>
-                        <Input type="select" name="select" id="exampleSelect">
-                            <option>Selecione...</option>
+                        <Input type="select" name="select" id="exampleSelect" onChange={(e) => setProduto(e.target.value)}>
                             { products.map(product => (
-                                <option key={product.id} label={product.nome}></option>  
+                                <option key={product.id} value={product.id} label={product.nome}></option>  
                                 )) 
                             }
                         </Input>
                         <span>+</span>
+                          {/*    <Input type="select" name="select" id="exampleSelect" onChange={(e) => setProduto(e.target.value)}>
+                            { products.map(product => (
+                                <option key={product.id} value={product.id} label={product.nome}></option>  
+                                )) 
+                            }
+                        </Input> */}
                     </FormGroup>
                     </Col>
                 </FormGroup>
@@ -99,12 +117,11 @@ function FormProduct( ) {
                     <Col sm={9}>
                     <FormGroup>
                     <Label >Selecionea embalagem:</Label>
-                        <Input type="select" name="select" id="exampleSelect">
-                            <option>Selecione...</option>
+                        <Input type="select" name="select" id="exampleSelect" onChange={(e) => setTypePackage(e.target.value)}>
                             {
                                 TypePackages.map( (name, index) => (
                                 index > 0 && 
-                                    <option label={name}></option>  
+                                    <option key={index} label={name} value={index}></option>  
                              
                                 ))
                             }

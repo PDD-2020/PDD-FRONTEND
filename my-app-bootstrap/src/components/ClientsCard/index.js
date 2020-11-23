@@ -8,7 +8,6 @@ function ClienstCard( { name, endereco, numero, email } ) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
-
   return (
    <Styled.Container>
       <Row>
