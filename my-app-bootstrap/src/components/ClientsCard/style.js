@@ -17,6 +17,10 @@ export const Container = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        &.notification {
+            background: rgb(255, 22, 22);
+        }
     }
 
 
@@ -30,6 +34,10 @@ export const Container = styled.div`
 
     .btn {
         border-radius: none;
+    }
+
+    .list-group-item {
+        background: transparent;
     }
 
   /*   .card {

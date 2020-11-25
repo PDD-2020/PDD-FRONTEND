@@ -21,7 +21,7 @@ const Home = (props) => {
         await api.get(`/cliente`)// interpolação de acento
         .then(response => {
             setClient(response.data);
-            console.log(response.data);
+            /* console.log(response.data); */
         })
     }
 
@@ -29,7 +29,7 @@ const Home = (props) => {
         await api.get(`/produtos`)// interpolação de acento
         .then(response => {
             setProduct(response.data);
-            console.log(response.data);
+            /* console.log(response.data); */
         })
     }
 
@@ -51,7 +51,7 @@ const Home = (props) => {
                     </FormGroup>
                     
                     { client.map(clients => (
-                        <ClientsCard name={clients.name}  endereco={clients.endereco} numero={clients.numero} email={clients.email}/> 
+                        <ClientsCard name={clients.name}  endereco={clients.endereco} numero={clients.numero} email={clients.email} id={clients.id}/> 
                         ))
                     }
                 </Col>

@@ -43,7 +43,7 @@ function FormProduct( ) {
     }
 
     async function SaveRequest() {
-        console.log('entrou aqui')
+        ///console.log('entrou aqui')
         await api.post('/pedidos', {
             cliente: {
                 id: cliente
