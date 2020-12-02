@@ -45,7 +45,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [x] Cadastro de Clientes
 - [x] Cadastro de Produtos
-- [ ] Cadastro de Pedidos
+- [x] Cadastro de Pedidos
 
 ## Home
 
